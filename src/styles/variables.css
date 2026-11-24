@@ -1,0 +1,12 @@
+:root {
+  --navy: #142b3c;
+  --navy-2: #203d50;
+  --ivory: #f4f0e8;
+  --white: #ffffff;
+  --terracotta: #c8794b;
+  --text: #4e5961;
+  --border: #dedcd5;
+  --serif: 'Libre Baskerville', Georgia, serif;
+  --sans: 'DM Sans', 'Segoe UI', Arial, sans-serif;
+  --container: 1180px;
+}
