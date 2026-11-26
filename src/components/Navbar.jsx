@@ -24,15 +24,38 @@ export default function Navbar() {
           <strong>EDU GROWTH</strong>
           <span>PARTNERS</span>
         </Link>
-        <button className="menu-button" type="button" aria-expanded={open} aria-controls="primary-navigation" onClick={() => setOpen((value) => !value)}>
+        <button 
+          className="menu-button" 
+          type="button" 
+          aria-expanded={open} 
+          aria-controls="primary-navigation" 
+          onClick={() => setOpen((value) => !value)}
+        >
           {open ? <X aria-hidden="true" /> : <Menu aria-hidden="true" />}
           <span className="sr-only">{open ? 'Close menu' : 'Open menu'}</span>
         </button>
-        <nav id="primary-navigation" className={`nav-links ${open ? 'nav-links--open' : ''}`} aria-label="Primary navigation">
+        <nav 
+          id="primary-navigation" 
+          className={`nav-links ${open ? 'nav-links--open' : ''}`} 
+          aria-label="Primary navigation"
+        >
           {links.map(([label, to]) => (
-            <NavLink key={to} to={to} end={to === '/'}>{label}</NavLink>
+            <NavLink 
+              key={to} 
+              to={to} 
+              end={to === '/'}
+              onClick={() => setOpen(false)}
+            >
+              {label}
+            </NavLink>
           ))}
-          <Link className="button button--nav" to="/contact">Request a Consultation</Link>
+          <Link 
+            className="button button--nav" 
+            to="/contact"
+            onClick={() => setOpen(false)}
+          >
+            Request a Consultation
+          </Link>
         </nav>
       </div>
     </header>
